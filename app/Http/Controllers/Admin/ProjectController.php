@@ -1,9 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Models\Project;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 
 class ProjectController extends Controller
@@ -53,7 +54,7 @@ class ProjectController extends Controller
      */
     public function show(Project $project)
     {
-        return view('projects.index', compact('project'));
+        return view('projects.show', compact('project'));
     }
 
     /**
